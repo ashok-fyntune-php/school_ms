@@ -24,7 +24,7 @@ use App\Http\Controllers\Auth\AuthController;
 // Route::get('/', [UserController::class, 'student']);
 // Route::post('post-login', [UserController::class, 'postLogin'])->name('login.post'); 
 Route::get('/',function(){
-    return '<h1>welcome to School Management portal</h1>';
+    return view("home");
 });
 Route::get('/test1',function(){
     return view('test1');
