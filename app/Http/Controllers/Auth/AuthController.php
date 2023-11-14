@@ -96,3 +96,4 @@ class AuthController extends Controller
         return Redirect('login');
     }
 }
+  jnmnm
