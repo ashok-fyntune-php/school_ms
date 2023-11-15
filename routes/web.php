@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\courseController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,12 +21,23 @@ use App\Http\Controllers\Auth\AuthController;
 // Route::get('/student',function (){
 //     return view('student_view');
 // });
- 
+
 // Route::get('/', [UserController::class, 'student']);
-// Route::post('post-login', [UserController::class, 'postLogin'])->name('login.post'); 
+// Route::post('post-login', [UserController::class, 'postLogin'])->name('login.post');
 Route::get('/',function(){
     return view("home");
 });
+
+Route::resource('course', courseController::class);
+
+
+
+
+
+
+
+
+
 Route::get('/test1',function(){
     return view('test1');
 })->name('testfirst');
@@ -34,10 +46,10 @@ Route::get('/test1',function(){
 Route::redirect('/test','/test1'); //if user type test in url it will redirect to test1 route . bookmark appl.
 
 Route::get('login', [AuthController::class, 'index'])->name('login');
-Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post'); 
+Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
 Route::get('registration', [AuthController::class, 'registration'])->name('register');
-Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post'); 
-Route::get('dashboard', [AuthController::class, 'dashboard']); 
-Route::get('home', [AuthController::class, 'home_function']); 
+Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
+Route::get('dashboard', [AuthController::class, 'dashboard']);
+Route::get('home', [AuthController::class, 'home_function']);
 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
