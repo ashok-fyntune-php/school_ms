@@ -45,8 +45,9 @@
          <td>Edit</td>
          <td>
             <form action="course/{{$course_value->id}}" method="POST">
-                @method('DELETE')
                 @csrf
+                @method('DELETE')
+
                 <input type="submit" value="delete" class="btn btn-primary">
             </form>
          </td>
@@ -56,6 +57,9 @@
   </tbody>
  </table>
 </div>
+
+
+
 
 
 

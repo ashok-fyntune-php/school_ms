@@ -53,3 +53,5 @@ Route::get('dashboard', [AuthController::class, 'dashboard']);
 Route::get('home', [AuthController::class, 'home_function']);
 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('login-otuser',[UserController::class,'login']);
