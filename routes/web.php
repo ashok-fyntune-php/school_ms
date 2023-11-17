@@ -25,7 +25,7 @@ use App\Http\Controllers\courseController;
 // Route::get('/', [UserController::class, 'student']);
 // Route::post('post-login', [UserController::class, 'postLogin'])->name('login.post');
 Route::get('/',function(){
-    return view("home");
+    return view("auth.login");
 });
 
 Route::resource('course', courseController::class);

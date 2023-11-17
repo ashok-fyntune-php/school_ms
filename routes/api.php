@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\StudentAlphaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('student-alpha',[StudentAlphaController::class,'index']);
+//now start inserting the data copy same route and make it post
+Route::post('student-alpha',[StudentAlphaController::class,'store']);

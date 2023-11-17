@@ -27,7 +27,7 @@ body {
   padding: 16px;
   text-decoration: none;
 }
- 
+
 .sidebar a.active {
   background-color: #04AA6D;
   color: white;
@@ -66,7 +66,7 @@ div.content {
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                
+
             </div>
         </div>
     </div>
@@ -77,12 +77,45 @@ div.content {
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
 </div>
+<div class="container">
+    <div class="row">
 
-<div class="content">
-  <h2>Responsive Sidebar Example</h2>
-  <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
-  <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
-  <h3>Resize the browser window to see the effect.</h3>
+        <form id="form" action="{{route('student-store')}}" method="POST">
+            @csrf
+                <div class="form-group">
+                    <label for="">First Name</label>
+                    <input type="text" class="form-control" name="first_name" id="Course_Name">
+               </div>
+
+               <div class="form-group">
+                 <label for="">Teacher_Name</label>
+                 <input type="text" class="form-control" name="last_name" id="Teacher_Name">
+            </div>
+
+            <div class="form-group">
+             <label for="">Batch_Time</label>
+             <input type="text" class="form-control" name="Batch_Time" id="Batch_Time">
+        </div>
+
+        <div class="form-group">
+         <label for="">Teaching_day</label>
+         <input type="text" class="form-control" name="Teaching_day" id="Teaching_day">
+     </div>
+
+     <div class="form-group">
+        <label for="">Scanned Copy Image</label>
+        <input type="file" class="form-control" name="Teaching_day" id="Teaching_day">
+    </div>
+
+     <div class="form-group">
+
+         <input type="submit" class="form-control btn btn-danger" value="Add Course" id="submit" >
+     </div>
+
+           </form>
+
+
+    </div>
 </div>
 
 </body>
