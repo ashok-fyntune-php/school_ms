@@ -2,14 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 class UserController extends Controller
 {
     public function student(){
 
         return view('auth.login');
     }
+    public function relation(){
+            //$user= User::first();
+            $user =User ::with('contact')->first();
+          //  return $user->all();
+          //   return $user->contact;
+             dd($user->toArray());
+
+     }
 
     public function postLogin(Request $request)
 

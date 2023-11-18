@@ -31,7 +31,8 @@ class AuthController extends Controller
 
          $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('home')
+            return redirect('course') // intended we use to write Route URL
+                    //return view("welcome");
                         ->withSuccess('Welcome school Management portal');
         }
           else{

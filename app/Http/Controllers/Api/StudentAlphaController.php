@@ -14,7 +14,7 @@ class StudentAlphaController extends Controller
       //let us fetch data from our database
       //lets create one variable $student Student model all() function
          $students =  StudentAlpha::all(); //this will return all data
-         if($students->count()>0){     //no.of rows greater than zero
+         if($students->count()> 0){     //no.of rows greater than zero
 
              return response()->json([
                 'status' => 200,
